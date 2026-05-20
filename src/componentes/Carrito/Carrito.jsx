@@ -4,7 +4,7 @@ import { CartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import { FaTrashAlt } from "react-icons/fa";
 
-import "./Carrito.css";
+import "./carrito.css";
 
 const Carrito = () => {
   const { carrito, borrarCarrito, borrarProducto, totalPrecio } =

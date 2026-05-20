@@ -1,10 +1,30 @@
 # Ecommerce Plot Time
 
-Este proyecto es un ecommerce de artículos de indumentaria. Permite filtrar los productos entre distintas categorias y ver cada uno con sus detalles. También tiene integrada la función para añadirlos a un carrito de compras y modificar cada item. Al finalizar la compra se piden los datos del usuario para corroborar la compra realizada.
+Plot Time es un ecommerce de indumentaria desarrollado con React.js. La aplicación permite explorar productos por categorías, visualizar el detalle de cada artículo y gestionar un carrito de compras de manera dinámica.
 
-## Screenshot
+El proyecto incluye funcionalidades como:
 
-![App Screenshot](/public/img/screenshot.png)
+- Filtrado de productos por categorías
+- Vista detallada de cada producto
+- Carrito de compras con modificación de cantidades
+- Eliminación de productos del carrito
+- Generación de orden de compra
+- Formulario de checkout para capturar los datos del comprador
+- Persistencia de datos utilizando Firebase
+
+El objetivo principal del proyecto fue desarrollar una experiencia de compra simple, responsive y dinámica aplicando conceptos de React, manejo de estados, rutas y renderizado de componentes.
+
+## Tecnologías utilizadas
+
+- React.js
+- React Router DOM
+- Firebase
+- CSS
+- Vite
+
+## Demo
+
+🌐 https://plot-time-store.vercel.app/
 
 ## Instalación
 

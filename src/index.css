@@ -5,6 +5,23 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f5f7fb;
+  color: #0d1020;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 h1,
 h2,
 h3,
@@ -25,3 +42,9 @@ ul {
 a {
   text-decoration: none;
 }
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+

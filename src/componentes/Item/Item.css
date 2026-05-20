@@ -2,19 +2,21 @@
   margin: 0 auto;
 }
 .item {
-  width: 250px;
+  width: 100%;
+  max-width: 280px;
   border-radius: 4px;
-  margin: 10px 40px;
-  margin-bottom: 40px;
+  margin: 0 auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   box-shadow: 2px 4px 23px 5px #0000005b, inset 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
 }
 
 .item .image {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: 190px;
   object-fit: contain;
   text-align: center;
@@ -29,7 +31,7 @@
   margin: 5px;
   font-weight: bold;
   font-style: italic;
-  font-size: 1.5em;
+  font-size: clamp(1.15rem, 5vw, 1.5rem);
   text-align: center;
 }
 
@@ -60,4 +62,50 @@
 .item .link:hover {
   cursor: pointer;
   background-color: #2b4c94;
+}
+
+@media screen and (max-width: 620px) {
+  .item {
+    max-width: 100%;
+    min-height: 0;
+    padding: 1rem;
+    border: 1px solid rgba(5, 2, 18, 0.08);
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 26px rgba(5, 2, 18, 0.12);
+  }
+
+  .item .image {
+    max-width: 240px;
+    height: 210px;
+    margin: 0.2rem auto 0.65rem;
+  }
+
+  .item .image:hover {
+    scale: 1.03;
+  }
+
+  .item .titulo {
+    margin: 0.35rem 0;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    color: #111525;
+  }
+
+  .item .precio {
+    margin: 0.2rem 0 0.85rem;
+    font-size: 1.12rem;
+    color: #26324f;
+  }
+
+  .item .link {
+    min-height: 48px;
+    margin: 0;
+    padding: 0 1rem;
+    font-size: 1.05rem;
+    border: 0;
+    border-radius: 12px;
+    background-color: #10172f;
+    box-shadow: 0 8px 18px rgba(16, 23, 47, 0.2);
+  }
 }

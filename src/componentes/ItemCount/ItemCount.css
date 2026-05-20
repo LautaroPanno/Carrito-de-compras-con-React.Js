@@ -1,5 +1,5 @@
 .item-count {
-  width: 200px;
+  width: min(100%, 220px);
   display: flex;
   flex-direction: column;
 }
@@ -13,7 +13,7 @@
 
 .controles button {
   width: 40px;
-  height: auto;
+  min-height: 40px;
   background-color: #080613;
   color: white;
   border-radius: 5px;
@@ -21,7 +21,7 @@
   font-size: 1em;
   border: none;
   transition: all 0.2s;
-  margin: 20px;
+  margin: 16px 8px;
 }
 
 button:hover {
@@ -44,7 +44,33 @@ button:hover {
 }
 @media screen and (max-width: 768px) {
   .item-count {
+    width: min(100%, 300px);
     text-align: center;
     margin: 0 auto;
+  }
+
+  .item-count .controles {
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.45rem;
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .controles button {
+    width: 48px;
+    min-height: 48px;
+    margin: 0;
+    border-radius: 12px;
+    background-color: #10172f;
+  }
+
+  .item-count .terminar {
+    min-height: 50px;
+    padding: 0 1rem;
+    font-size: 1.05rem;
+    border: 0;
+    border-radius: 13px;
+    background-color: #10172f;
+    box-shadow: 0 8px 18px rgba(16, 23, 47, 0.2);
   }
 }

@@ -4,23 +4,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+}
+
+.formu {
+  width: min(100%, 520px);
 }
 
 .formu h2 {
   text-align: center;
-  margin: 2rem;
+  margin: 2rem 1rem;
 }
 .formulario {
-  min-width: 300px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
-  margin: 1rem 2rem;
+  margin: 1rem 0;
 }
 
 .formulario input {
+  width: 100%;
   font-size: 20px;
   padding: 10px 5px;
   margin: 10px 0;
@@ -59,7 +65,7 @@
   font-weight: bold;
 }
 .boton-orden .vermasproductos {
-  width: 250px;
+  width: min(100%, 250px);
   margin: 0 auto;
   font-size: 1.3rem;
   font-weight: bold;
@@ -75,4 +81,66 @@
 .boton-orden .vermasproductos:hover {
   color: #ffff;
   background-color: #241c60;
+}
+
+@media screen and (max-width: 480px) {
+  .checkout {
+    align-items: flex-start;
+    padding: 1rem 0.8rem 1.75rem;
+  }
+
+  .formu h2 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin: 1rem 0 1.25rem;
+    color: #101426;
+  }
+
+  .formulario {
+    font-size: 1.05rem;
+    gap: 0.15rem;
+    padding: 1rem;
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 26px rgba(5, 2, 18, 0.1);
+  }
+
+  .formulario input,
+  .formulario button {
+    font-size: 1.05rem;
+  }
+
+  .formulario input {
+    min-height: 48px;
+    padding: 0 0.8rem;
+    border: 1px solid rgba(16, 23, 47, 0.16);
+    border-radius: 12px;
+  }
+
+  .formulario button {
+    min-height: 50px;
+    width: 100%;
+    border: 0;
+    border-radius: 13px;
+    background-color: #10172f;
+    box-shadow: 0 8px 18px rgba(16, 23, 47, 0.18);
+  }
+
+  .orden,
+  .orden p {
+    margin: 1rem 0;
+  }
+
+  .orden p {
+    font-size: 1.1rem;
+  }
+
+  .boton-orden .vermasproductos {
+    min-height: 50px;
+    border: 0;
+    border-radius: 13px;
+    background-color: #10172f;
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(16, 23, 47, 0.18);
+  }
 }

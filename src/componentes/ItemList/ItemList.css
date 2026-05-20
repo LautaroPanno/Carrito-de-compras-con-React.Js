@@ -1,10 +1,15 @@
 .item-list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
 }
-.item-list image {
-  width: 10%;
+
+@media screen and (max-width: 620px) {
+  .item-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
 }

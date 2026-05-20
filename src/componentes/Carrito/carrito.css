@@ -1,5 +1,7 @@
 .carrito {
   min-height: 90vh;
+  width: min(100%, 1100px);
+  margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -7,8 +9,9 @@
 
 .carrito .lista {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .carrito .producto {
@@ -71,6 +74,7 @@
 .botones-vaciar-continuar {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2rem;
   font-size: 1.2rem;
 }
@@ -128,7 +132,7 @@
 }
 
 .button-verproductos {
-  width: 200px;
+  width: min(100%, 200px);
   font-size: 1.3rem;
   display: flex;
   justify-content: center;
@@ -145,4 +149,93 @@
 .carrito h3 {
   margin-top: 1rem;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .carrito {
+    padding: 12px 10px 1.75rem;
+  }
+
+  .carrito .producto {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid rgba(5, 2, 18, 0.08);
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 26px rgba(5, 2, 18, 0.1);
+  }
+
+  .producto .imagen {
+    width: min(100%, 13rem);
+    padding: 0 0 0.8rem;
+  }
+
+  .carrito-texto {
+    width: 100%;
+    padding: 0;
+    font-size: 1.05rem;
+    line-height: 1.45;
+    color: #28314a;
+  }
+
+  .texto-nombre {
+    font-size: 1.25rem;
+    color: #101426;
+  }
+
+  .borrar {
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 0.8rem;
+    border-radius: 12px;
+  }
+
+  .botones-vaciar-continuar {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .boton-carrito-borrar,
+  .boton-carrito-continuar {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 0;
+    padding: 0 1rem;
+    border: 0;
+    border-radius: 13px;
+    background-color: #10172f;
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(16, 23, 47, 0.18);
+  }
+
+  .boton-carrito-borrar {
+    background-color: #3a1721;
+  }
+
+  .carrito-vacio {
+    padding: 1rem;
+  }
+
+  .carrito-vacio h2 {
+    font-size: 1.4rem;
+    margin: 1rem;
+    color: #101426;
+  }
+
+  .button-verproductos {
+    min-height: 50px;
+    align-items: center;
+    border: 0;
+    border-radius: 13px;
+    background-color: #10172f;
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(16, 23, 47, 0.18);
+  }
+
+  .carrito h3 {
+    font-size: 1.25rem;
+    color: #101426;
+  }
 }
